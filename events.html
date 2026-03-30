@@ -32,7 +32,7 @@
             events[category].forEach(event => {
                 let li = document.createElement("li");
                 let eventId = event.toLowerCase().replace(/\s+/g, "-"); 
-                li.innerHTML = `<a href="sub-events.html?event=${eventId}">${event}</a>`;
+                li.innerHTML = `<a href="./sub-events.html?event=${eventId}">${event}</a>`;
                 eventList.appendChild(li);
             });
         });
