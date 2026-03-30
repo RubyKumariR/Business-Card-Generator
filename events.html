@@ -24,6 +24,11 @@
             };
 
             const eventList = document.getElementById("eventList");
+            if (!category || !events[category]) {
+                eventList.innerHTML = '<li>Please select a role from the previous page first.</li>';
+                return;
+            }
+
             events[category].forEach(event => {
                 let li = document.createElement("li");
                 let eventId = event.toLowerCase().replace(/\s+/g, "-"); 
